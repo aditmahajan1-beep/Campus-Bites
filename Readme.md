@@ -5,13 +5,13 @@ Your campus food, just a click away.
 ## 📸 Project Screenshots
 
 ### 🔐 Login
-![Login Page](screenshots/login.png)
+![Login Page](screenshot/login.png)
 
 ### 🛒 Cart
-![Cart](screenshots/cart.png)
+![Cart](screenshot/cart.png)
 
 ### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshot/dashboard.png)
 
 ### 📦 Admin
-![Admin](screenshots/admin.png)
+![Admin](screenshot/admin.png)
