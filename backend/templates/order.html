@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="menu-header">
+    <div class="logo">CampusBites 🍔</div>
+    <div class="user">{{ name }}</div>
+</div>
+
+<div class="order-wrapper">
+    <div class="order-card">
+        <h2>Order Placed Successfully 🎉</h2>
+        <p>
+    Your 
+    <b>
+        {% for item in items %}
+            {{ item }}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    </b>
+    {% if items|length == 1 %}
+        is being prepared.
+    {% else %}
+        are being prepared.
+    {% endif %}
+</p>
+
+
+        <div class="order-status">
+            Status: <span>Preparing</span>
+        </div>
+
+        <div class="loader"></div>
+
+        <p class="small-text">Please wait while our chefs prepare your food.</p>
+    </div>
+</div>
+
+</body>
+</html>

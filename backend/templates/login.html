@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Bite Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-page">
+
+    <!-- Left Side (60%) -->
+    <div class="login-left">
+        <div class="brand">
+            <h1>CampusBites 🍔</h1>
+            <p>Your campus food, just a click away.</p>
+        </div>
+    </div>
+
+    <!-- Right Side (40%) -->
+    <div class="login-right">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <p>Enter your name to continue</p>
+            <form action="/menu" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Bite - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header (same style as other pages) -->
+<div class="menu-header">
+    <div class="logo">CampusBites 🍔</div>
+    <div class="user">Admin</div>
+</div>
+
+<div class="container admin-container">
+    <h2>Admin Dashboard</h2>
+
+    {% if orders %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for order in orders %}
+        <tr>
+            <td>{{ order[0] }}</td>  <!-- Name -->
+            <td>{{ order[1] }}</td>  <!-- Item -->
+            <td>{{ order[2] }}</td>  <!-- Quantity -->
+            <td>{{ order[3] }}</td>  <!-- Time -->
+            <td>{{ order[4] }}</td>  <!-- Status -->
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p style="text-align:center;">No orders yet.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
